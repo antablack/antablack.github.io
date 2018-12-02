@@ -1,22 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css?3" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <title>Juan Sanchez</title>
 </head>
+
 <body>
-    Hello I'am Juan Sanchez
 
+    <span class="responsive-bars">
+        <i class="fas fa-bars"></i>
+    </span>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130078340-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <header>
+        <span class="responsive-close">
+            <i class="fas fa-times"></i>
+        </span>
+        <div class="profile">
+            <img src="./photo.gif" width="150" height="150" alt="Juan Sánchez">
+            <h2>Juan Sánchez</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about_me">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+        </nav>
+        <section>
+            <a href="https://medium.com/@jcsanchezv1998" target="_blank">
+                <span><i class="fab fa-medium"></i></span>
+            </a>
+            <a href="https://github.com/antablack" target="_blank">
+                <span><i class="fab fa-github-square"></i></span>
+            </a>
+            <a href="https://twitter.com/Antablack1" target="_blank">
+                <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+            <a href="https://www.instagram.com/juan_sanchezv98" target="_blank">
+                <span><i class="fab fa-instagram"></i></span>
+            </a>
+            <a href="mailto:jcsanchezv1998@gmail.com" target="_blank">
+                <span><i class="fas fa-envelope"></i></span>
+            </a>
+        </section>
+    </header>
+    <section>
+        <div class="title">
+            <h1>Hi, I'm Juan</h1>
+            <h3>Developer and Tech Lover</h3>
+        </div>
 
-  gtag('config', 'UA-130078340-1');
-</script>
+        <div class="separation"></div>
+        <article id="about_me">
+            <h4>ABOUT ME 🙎🏻‍♂️</h4>
+            <p>
+                My full name is Juan Carlos Sanchez. I started developing software for more than 4 years, since I was
+                small I was always enormously attracted to technology and to know how it worked, and even though I did
+                they have an early access to a lot of technology (due to the region where I lived) I remember that my
+                mother used to scold me because I broke my toys out of curiosity to know how they worked 😁.
+            </p>
+            <p>
+                I currently live in Barranquilla - Colombia I work in a small SaaS company where I work as a software
+                developer, I also love to participate in meetup as <a href="https://www.meetup.com/es/BarranquillaJS/"
+                    target="_blank">Barraquilla JS</a> and I am also a mentor in <a href="http://ideaware.co/pioneras-dev-1st-meet-up/"
+                    target="_blank">Pioneras</a>
+                Dev Barranquilla.
+            </p>
+        </article>
+
+        <div class="separation"></div>
+        <article id="skills">
+            <h4>SKILLS 😎</h4>
+            <p>
+                <div class="skills">
+                    <div>NODE JS</div>
+                    <div><progress value="80" max="100"></progress></div>
+                    <div>REACT JS</div>
+                    <div><progress value="60" max="100"></progress></div>
+                    <div>.NET(C# & VB)</div>
+                    <div><progress value="70" max="100"></progress></div>
+                    <div>RUBY</div>
+                    <div><progress value="50" max="100"></progress></div>
+                    <div>SWIFT</div>
+                    <div><progress value="60" max="100"></progress></div>
+                    <div>ANGULAR 2+</div>
+                    <div><progress value="40" max="100"></progress></div>
+                    <div>HTML/CSS</div>
+                    <div><progress value="80" max="100"></progress></div>
+                </div>
+
+            </p>
+            <p>
+                MSSQL | MongoDB | PostgreSQL | MySQL | VueJS | Firebase
+            </p>
+        </article>
+    </section>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130078340-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-130078340-1');
+    </script>
+    <script>
+        window.onload = function () {
+            document.querySelector(".responsive-bars").addEventListener("click", function () {
+                document.querySelector("header").classList.add("active");
+            })
+            document.querySelector(".responsive-close").addEventListener("click", function () {
+                document.querySelector("header").classList.remove("active");
+            })
+            document.querySelectorAll("nav ul li a").forEach(item => (item.addEventListener("click", function () {
+                document.querySelector("header").classList.remove("active");
+            })
+            ))
+        }
+    </script>
 </body>
+
 </html>
