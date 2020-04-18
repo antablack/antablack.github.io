@@ -1,0 +1,115 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+* {
+  font-family: 'futura'
+}
+
+.body {
+  display: flex;
+  position: relative;
+
+
+  > main {
+    flex: 1;
+    padding: 25px 100px;
+    margin-left: 20%;
+
+    .title {
+      h1 {
+        font-size: 35px;
+        margin-bottom: 0px;
+      }
+
+      h3 {
+        font-size: 15px;
+        margin-top: 0px;
+      }
+    }
+
+    h1,
+    h3,
+    h4 {
+      font-weight: 500;
+    }
+
+    article {
+
+      p,
+      div {
+        color: #514C4C;
+      }
+
+      p a {
+        color: #514C4C;
+
+        &:visited {
+          color: #514C4C;
+        }
+      }
+    }
+  }
+
+}
+
+
+.responsive-bars,
+.responsive-close {
+  display: none;
+}
+
+@keyframes burger-active {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 780px) {
+
+  .responsive-bars,
+  .responsive-close {
+    display: block;
+    position: absolute;
+    font-size: 25px;
+  }
+
+  .responsive-bars {
+    left: 10px;
+    top: 10px;
+  }
+
+  .responsive-close {
+    right: 10px;
+    top: 10px;
+  }
+
+  header {
+    &.active {
+      display: flex;
+      -webkit-animation: burger-active 0.3s linear;
+      animation: burger-active 0.3s linear;
+    }
+
+    padding: 0;
+    width: 100%;
+    display: none;
+
+    >nav li {
+      text-align: center;
+    }
+  }
+
+  body>main {
+    flex: 1;
+    padding: 25px 15px;
+    margin-left: 0;
+  }
+}
