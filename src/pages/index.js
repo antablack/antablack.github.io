@@ -11,44 +11,11 @@ import SEO from "../components/seo"
 import PortafolioGrid from "../components/portafoliogrid"
 import Card from "../components/shared/card"
 
-const SKILLS = [
-  { name: "NODE JS", value: 80 },
-  { name: "REACT JS", value: 60 },
-  { name: ".NET(C# & VB)", value: 70 },
-  { name: "RUBY", value: 50 },
-  { name: "SWIFT", value: 60 },
-  { name: "ANGULAR 2+", value: 40 },
-  { name: "HTML/CSS", value: 80 },
-]
-
-
-const PORTAFOLIO = [
-  {
-    img: "",
-    title: "Mysaic",
-    content: `Integrated a team of software developers 
-as Tech lead and collaborated in the 
-design and development of a project 
-focused on a social network for a 
-North American client.`,
-    tools: ["Ruby", "AWS", "Rails", "MySQL", "Swift", "Kotlin", "Docker", "Linux", "Linode", "Fargate"]
-  },
-  {
-    img: "",
-    title: "Tops",
-    content: `Developed and maintained the internal 
-    process management system and 
-    automation software for an USA 
-    transcription company.`,
-    tools: ["Ruby", "AWS", "Rails", "MySQL", "Swift", "Kotlin", "Docker", "Linux", "Linode", "Fargate"]
-  }
-]
-
-
+import { SKILLS, PORTAFOLIO } from "../components/constants"
 
 const IndexPage = () => (
   <Layout>
-    <div class="title">
+    <div className="title">
 
       <Title1>
         Hi, I'm Juan
@@ -75,9 +42,9 @@ const IndexPage = () => (
         MSSQL | MongoDB | PostgreSQL | MySQL | VueJS | Firebase
       </Content>
     </article>
+
     <Divider />
     <Subtitle1>PORTAFOLIO 💼</Subtitle1>
-
     <PortafolioGrid>
       {PORTAFOLIO.map(item => (<Card {...item} />))}
     </PortafolioGrid>

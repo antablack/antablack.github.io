@@ -4,11 +4,11 @@ import Content from "../content"
 import Cheap from "../cheap"
 import "./index.scss"
 
-const Card = ({ title, content, tools }) => {
+const Card = ({ img, title, content, tools }) => {
     return <div className="card_container">
 
-        <div style={{textAlign: "center"}}>
-            <img src="https://sniffandwag.com/wp-content/uploads/2019/12/baby-cats-cute-and-funny-cat-vid.jpg" width="200"/>
+        <div style={{display: "flex", justifyContent: "center"}}>
+            {img()}
         </div>
 
         <Subtitle1>{title}</Subtitle1>
