@@ -10,13 +10,14 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import PortafolioGrid from "../components/portafoliogrid"
 import Card from "../components/shared/card"
+import MinimalistCard from "../components/shared/minimalistcard"
 
-import { SKILLS, PORTAFOLIO } from "../components/constants"
+
+import { SKILLS, PORTAFOLIO, HOBBY_PROJECTS } from "../components/constants"
 
 const IndexPage = () => (
   <Layout>
     <div className="title">
-
       <Title1>
         Hi, I'm Juan
       </Title1>
@@ -24,7 +25,6 @@ const IndexPage = () => (
     </div>
 
     <Divider />
-
     <article>
       <Subtitle1>ABOUT ME 🙎🏻‍♂️</Subtitle1>
       <Content>
@@ -34,6 +34,7 @@ const IndexPage = () => (
         I currently live in Barranquilla - Colombia I work in a small SaaS company where I work as a software developer, I also love to participate in meetup as Barraquilla JS and I am also a mentor in Pioneras Dev Barranquilla.
       </Content>
     </article>
+
     <Divider />
     <article>
       <Subtitle1>ABOUT ME 🙎🏻‍♂️</Subtitle1>
@@ -51,7 +52,9 @@ const IndexPage = () => (
 
     <Divider />
     <Subtitle1>HOBBY PROJECTS 🎮</Subtitle1>
-
+    <PortafolioGrid>
+      {HOBBY_PROJECTS.map(item => (<MinimalistCard {...item} />))}
+    </PortafolioGrid>
   </Layout>
 )
 

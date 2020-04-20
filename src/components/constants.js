@@ -19,7 +19,10 @@ const APPS_ICONS = {
   "TOPS": "tops.png",
   "BPM": "bpm.png",
   "CONTROLBLOOD": "controlblood.png",
-  "IMPOMOTOR": "impomotor.png"
+  "IMPOMOTOR": "impomotor.png",
+  "E-UNIVERSITY": "e-university.png",
+  "ADDON": "addon.png",
+  "GRAPTEL": "graptel.png"
 }
 
 const AppIcon = (app) => {
@@ -73,3 +76,25 @@ export const PORTAFOLIO = [
     tools: [".NET", "C#", "VB", "MSSQL", "JQuery", "Window Server", "IIS"]
   }
 ]
+
+
+export const HOBBY_PROJECTS = [
+  {
+    img: AppIcon("E-UNIVERSITY"),
+    title: "E-University",
+    content: `Unofficial mobile application
+    for my university.`,
+  },
+  {
+    img: AppIcon("ADDON"),
+    title: "Easy Translate",
+    content: `Add-on to translate from 
+    english to spanish for Firefox`,
+  },
+  {
+    img: AppIcon("GRAPTEL"),
+    title: "GrapTel",
+    content: `Graphics representation 
+    of few codification 
+    techniques.`,
+  }]
