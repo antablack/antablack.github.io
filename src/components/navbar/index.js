@@ -19,10 +19,10 @@ const Navbar = ({ isExpanded }) => {
             </div>
             <nav>
                 <ul>
-                    <li><a href="#about_me">About Me</a></li>
+                    <li><a href="#about-me">About Me</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#skills">Portafolio</a></li>
-                    <li><a href="#skills">Hobby Projects</a></li>
+                    <li><a href="#portafolio">Portafolio</a></li>
+                    <li><a href="#hobby-projects">Hobby Projects</a></li>
                 </ul>
             </nav>
             <section>

@@ -22,7 +22,7 @@ const IndexPage = () => {
 
   return (<Layout>
     <span class="responsive-bars">
-      <FontAwesomeIcon icon={faBars} onClick={() => dispatch({type: "TOGGLE_HEADER"})}/>
+      <FontAwesomeIcon icon={faBars} onClick={() => dispatch({ type: "TOGGLE_HEADER" })} />
     </span>
 
     <div className="title">
@@ -33,7 +33,7 @@ const IndexPage = () => {
     </div>
 
     <Divider />
-    <article>
+    <article id="about-me">
       <Subtitle1>ABOUT ME 🙎🏻‍♂️</Subtitle1>
       <Content>
         My full name is Juan Carlos Sanchez. I started developing software for more than 4 years, since I was small I was always enormously attracted to technology and to know how it worked, and even though I did they have an early access to a lot of technology (due to the region where I lived) I remember that my mother used to scold me because I broke my toys out of curiosity to know how they worked 😁.
@@ -44,8 +44,8 @@ const IndexPage = () => {
     </article>
 
     <Divider />
-    <article>
-      <Subtitle1>ABOUT ME 🙎🏻‍♂️</Subtitle1>
+    <article id="skills">
+      <Subtitle1>SKILLS 😎</Subtitle1>
       <Skill skills={SKILLS} />
       <Content>
         MSSQL | MongoDB | PostgreSQL | MySQL | VueJS | ANGULAR 2+ | Firebase
@@ -53,18 +53,22 @@ const IndexPage = () => {
     </article>
 
     <Divider />
-    <Subtitle1>PORTAFOLIO 💼</Subtitle1>
-    <PortafolioGrid>
-      {PORTAFOLIO.map(item => (<Card {...item} />))}
-    </PortafolioGrid>
-
+    <article id="portafolio">
+      <Subtitle1>PORTAFOLIO 💼</Subtitle1>
+      <PortafolioGrid>
+        {PORTAFOLIO.map(item => (<Card {...item} />))}
+      </PortafolioGrid>
+    </article>
     <Divider />
-    <Subtitle1>HOBBY PROJECTS 🎮</Subtitle1>
-    <PortafolioGrid>
-      {HOBBY_PROJECTS.map(item => (<MinimalistCard {...item} />))}
-    </PortafolioGrid>
+    <article id="hobby-projects">
+      <Subtitle1>HOBBY PROJECTS 🎮</Subtitle1>
+      <PortafolioGrid>
+        {HOBBY_PROJECTS.map(item => (<MinimalistCard {...item} />))}
+      </PortafolioGrid>
+    </article>
+
   </Layout>)
-  }
+}
 
 
 export default IndexPage
