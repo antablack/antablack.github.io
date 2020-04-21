@@ -1,0 +1,27 @@
+.skills {
+    display: grid;
+    grid-template-columns: 20% 70%;
+    grid-gap: 25px;
+    height: 40px;
+
+    div {
+      display: flex;
+      align-items: center;
+    }
+
+    progress {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 15px;
+
+      &::-webkit-progress-bar {
+        background-color: #ffffff;
+      }
+
+      &::-webkit-progress-value {
+        background-color: #CEAA51;
+      }
+    }
+  }
+
