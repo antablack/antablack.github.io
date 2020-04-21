@@ -3,8 +3,6 @@ name: Gastbyjs site CI
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
   build_and_deploy:
