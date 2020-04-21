@@ -3,8 +3,6 @@ header {
   display: flex;
   padding: 0px 40px;
   flex-direction: column;
-  -webkit-box-shadow: -25px -2px 76px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -25px -2px 76px 0px rgba(0, 0, 0, 0.75);
   box-shadow: -25px -2px 76px 0px rgba(0, 0, 0, 0.75);
   position: fixed;
   background: #ffffff;
@@ -12,7 +10,7 @@ header {
   a {
     text-decoration: none;
     color: black;
-    padding: 3px;
+    padding: 10px;
   }
 
   & > {
@@ -21,7 +19,9 @@ header {
     }
 
     .profile {
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     nav {

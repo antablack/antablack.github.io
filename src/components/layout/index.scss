@@ -9,6 +9,10 @@ body {
   font-family: 'futura'
 }
 
+body, main {
+  overflow: hidden;
+}
+
 .body {
   display: flex;
   position: relative;
@@ -100,14 +104,14 @@ body {
 
     padding: 0;
     width: 100%;
-    display: none;
+    //display: none;
 
     >nav li {
       text-align: center;
     }
   }
 
-  body>main {
+  .body>main {
     flex: 1;
     padding: 25px 15px;
     margin-left: 0;

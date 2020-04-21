@@ -11,12 +11,17 @@ import SEO from "../components/seo"
 import PortafolioGrid from "../components/portafoliogrid"
 import Card from "../components/shared/card"
 import MinimalistCard from "../components/shared/minimalistcard"
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 import { SKILLS, PORTAFOLIO, HOBBY_PROJECTS } from "../components/constants"
 
 const IndexPage = () => (
   <Layout>
+    <span class="responsive-bars">
+      <FontAwesomeIcon icon={faBars}/>
+    </span>
+
     <div className="title">
       <Title1>
         Hi, I'm Juan

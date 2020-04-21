@@ -13,7 +13,7 @@ const Photo = () => {
               }
         }
       }`)
-    return <Img imgStyle fluid={data.file.childImageSharp.fluid} />
+    return <Img  style={{width: "150px", height: "150px"}} fluid={data.file.childImageSharp.fluid} />
 }
 
 
