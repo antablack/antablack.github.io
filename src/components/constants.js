@@ -5,11 +5,13 @@ import React from "react"
 export const SKILLS = [
   { name: "NODE JS", value: 80 },
   { name: "REACT JS", value: 60 },
-  { name: ".NET(C# & VB)", value: 70 },
   { name: "RUBY", value: 50 },
   { name: "SWIFT", value: 60 },
-  { name: "ANGULAR 2+", value: 40 },
+  { name: "GIT", value: 90 },
+  { name: "DOCKER", value: 75 },
+  { name: "KUBERNTES", value: 30 },
   { name: "HTML/CSS", value: 80 },
+  { name: ".NET(C# & VB)", value: 70 }
 ]
 
 

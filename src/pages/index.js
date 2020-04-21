@@ -13,13 +13,16 @@ import Card from "../components/shared/card"
 import MinimalistCard from "../components/shared/minimalistcard"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-
+import { useDispatch } from "react-redux"
 import { SKILLS, PORTAFOLIO, HOBBY_PROJECTS } from "../components/constants"
 
-const IndexPage = () => (
-  <Layout>
+const IndexPage = () => {
+
+  const dispatch = useDispatch()
+
+  return (<Layout>
     <span class="responsive-bars">
-      <FontAwesomeIcon icon={faBars}/>
+      <FontAwesomeIcon icon={faBars} onClick={() => dispatch({type: "TOGGLE_HEADER"})}/>
     </span>
 
     <div className="title">
@@ -45,7 +48,7 @@ const IndexPage = () => (
       <Subtitle1>ABOUT ME 🙎🏻‍♂️</Subtitle1>
       <Skill skills={SKILLS} />
       <Content>
-        MSSQL | MongoDB | PostgreSQL | MySQL | VueJS | Firebase
+        MSSQL | MongoDB | PostgreSQL | MySQL | VueJS | ANGULAR 2+ | Firebase
       </Content>
     </article>
 
@@ -60,7 +63,8 @@ const IndexPage = () => (
     <PortafolioGrid>
       {HOBBY_PROJECTS.map(item => (<MinimalistCard {...item} />))}
     </PortafolioGrid>
-  </Layout>
-)
+  </Layout>)
+  }
+
 
 export default IndexPage

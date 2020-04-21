@@ -8,11 +8,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import { connect } from "react-redux"
 import Navbar from "../navbar"
 import "./index.scss"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, isExpanded }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -26,13 +26,21 @@ const Layout = ({ children }) => {
   return (
     <div className="body">
       <Navbar />
-      <main>{children}</main>
+      <main style={{display: isExpanded ?  "none" : "block"}}>{children}</main>
     </div>
   )
+}
+
+Layout.defaultProps = {
+  isExpanded: false
 }
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+const mapStateToProps = ({ isExpanded }) => {
+  return { isExpanded }
+}
+
+export default connect(mapStateToProps)(Layout) 
