@@ -9,9 +9,9 @@ body {
   font-family: 'futura'
 }
 
-body, main {
+/*body, main {
   overflow: hidden;
-}
+}*/
 
 .body {
   display: flex;
@@ -88,6 +88,7 @@ body, main {
   .responsive-bars {
     left: 10px;
     top: 10px;
+    z-index: 1;
   }
 
   .responsive-close {
